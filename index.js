@@ -32,5 +32,11 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 topMenuEl.classList.add("flex-around");
 
 //* Task 3.1
-menuLinks.forEach((element) => console.log(element));
-console.log(menuLinks);
+for (var i = 0; i < menuLinks.length; i++) {
+  var linkEl = document.createElement("a");
+  linkEl.setAttribute("href", menuLinks[i].href);
+  linkEl.textContent = menuLinks[i].text;
+  topMenuEl.appendChild(linkEl);
+}
+
+// Create new anchor element    // Set href attribute to link object's href property    // Set the new element's content to the value of the text property of the link object    // Append the new element to the topMenuElelement
