@@ -54,3 +54,15 @@ menuLinks.forEach((menuObj) => {
   // Append the new element to the topMenuElelement.
   topMenuEl.appendChild(a);
 });
+
+//* =================================== Day 2 =====================================
+//* Task 4.0
+const submenuEl = document.getElementById("sub-menu");
+
+//* Task 4.1
+submenuEl.style.height = "100%";
+
+//* Task 4.2
+//* Task 4.3
+//* Task 4.4
+//* Task 4.5
