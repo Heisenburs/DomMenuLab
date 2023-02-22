@@ -78,7 +78,7 @@ menuLinks.forEach((menuObj) => {
   topMenuEl.appendChild(a);
 });
 
-//* =================================== Day 2 =====================================
+//* ================================= Day 2 =====================================
 //* Task 4.0
 const submenuEl = document.getElementById("sub-menu");
 
@@ -96,3 +96,33 @@ submenuEl.style.position = "absolute";
 
 //* Task 4.5
 submenuEl.style.top = "0";
+
+//* Task 5.1
+const topMenuLinks = document.querySelectorAll("a");
+
+const showingSubMenu = false;
+
+//* Task 5.2 - half completed
+topMenuEl.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  if (event.target.tagName.toLowerCase() !== "a") {
+    return;
+  }
+
+  if (event.target.classList.contains("active")) {
+    event.target.classList.remove("active");
+    showingSubMenu = false;
+    submenuEl.style.top = "0";
+    return;
+  }
+
+  topMenuLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+  showingSubMenu = true;
+});
+
+//* Task 5.3
