@@ -1,6 +1,6 @@
 // Menu Data Structure
 //* Task 3.0
-let menuLinks = [
+const menuLinks = [
   { text: "about", href: "/about" },
   { text: "catalog", href: "/catalog" },
   { text: "orders", href: "/orders" },
@@ -32,11 +32,25 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 topMenuEl.classList.add("flex-around");
 
 //* Task 3.1
-for (var i = 0; i < menuLinks.length; i++) {
-  var linkEl = document.createElement("a");
-  linkEl.setAttribute("href", menuLinks[i].href);
-  linkEl.textContent = menuLinks[i].text;
-  topMenuEl.appendChild(linkEl);
-}
 
-// Create new anchor element    // Set href attribute to link object's href property    // Set the new element's content to the value of the text property of the link object    // Append the new element to the topMenuElelement
+// done w/ group
+// for (let i = 0; i < menuLinks.length; i++) {
+//   let linkEl = document.createElement("a");
+//   linkEl.setAttribute("href", menuLinks[i].href);
+//   linkEl.textContent = menuLinks[i].text;
+//   topMenuEl.appendChild(linkEl);
+// }
+
+// Solution Code Along
+menuLinks.forEach((menuObj) => {
+  // Create an <a>element.
+  const a = document.createElement("a");
+
+  // On the new element, add an href attribute with its value set to the href property of the "link" object.
+  a.setAttribute("href", menuObj.href);
+
+  // Set the new element's content to the value of the text property of the "link" object.
+  a.textContent = menuObj.text;
+  // Append the new element to the topMenuElelement.
+  topMenuEl.appendChild(a);
+});
