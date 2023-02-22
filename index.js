@@ -67,5 +67,9 @@ submenuEl.style.backgroundColor = "var(--sub-menu-bg)";
 
 //* Task 4.3
 submenuEl.classList.add("flex-around");
+
 //* Task 4.4
+submenuEl.style.position = "absolute";
+
 //* Task 4.5
+submenuEl.style.top = "0";
