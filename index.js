@@ -63,6 +63,9 @@ const submenuEl = document.getElementById("sub-menu");
 submenuEl.style.height = "100%";
 
 //* Task 4.2
+submenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+
 //* Task 4.3
+submenuEl.classList.add("flex-around");
 //* Task 4.4
 //* Task 4.5
