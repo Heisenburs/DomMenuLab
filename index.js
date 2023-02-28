@@ -107,22 +107,25 @@ topMenuEl.addEventListener("click", function (event) {
   event.preventDefault();
 
   if (event.target.tagName.toLowerCase() !== "a") {
+    console.log(event.target.tagName.toLowerCase());
     return;
   }
-
-  if (event.target.classList.contains("active")) {
-    event.target.classList.remove("active");
-    showingSubMenu = false;
-    submenuEl.style.top = "0";
-    return;
-  }
-
-  topMenuLinks.forEach((link) => {
-    link.classList.remove("active");
-  });
-
-  event.target.classList.add("active");
-  showingSubMenu = true;
+  console.log(event.target.innerHTML);
+  console.log(event.target);
 });
 
 //* Task 5.3
+
+// if (event.target.classList.contains("active")) {
+//   event.target.classList.remove("active");
+//   showingSubMenu = false;
+//   submenuEl.style.top = "0";
+//   return;
+// }
+
+// topMenuLinks.forEach((link) => {
+//   link.classList.remove("active");
+// });
+
+// event.target.classList.add("active");
+// // showingSubMenu = true;
