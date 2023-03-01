@@ -110,18 +110,16 @@ topMenuEl.addEventListener("click", function (event) {
     console.log(event.target.tagName.toLowerCase());
     return;
   }
-  console.log(event.target.innerHTML);
-  console.log(event.target);
+  console.log(event.target.innerText);
+
+  //* Task 5.3
+  if (event.target.classList.includes("active")) {
+    event.target.classList.remove("active");
+    showingSubMenu = false;
+    submenuEl.style.top = "0";
+    return;
+  }
 });
-
-//* Task 5.3
-
-// if (event.target.classList.contains("active")) {
-//   event.target.classList.remove("active");
-//   showingSubMenu = false;
-//   submenuEl.style.top = "0";
-//   return;
-// }
 
 // topMenuLinks.forEach((link) => {
 //   link.classList.remove("active");
