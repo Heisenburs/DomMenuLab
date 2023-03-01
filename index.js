@@ -119,6 +119,9 @@ topMenuEl.addEventListener("click", function (event) {
     submenuEl.style.top = "0";
     return;
   }
+
+  //* Task 5.4
+  event.target.classList.remove("active");
 });
 
 // topMenuLinks.forEach((link) => {
