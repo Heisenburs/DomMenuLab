@@ -113,7 +113,7 @@ topMenuEl.addEventListener("click", function (event) {
   console.log(event.target.innerText);
 
   //* Task 5.3
-  if (event.target.classList.includes("active")) {
+  if (event.target.classList.contains("active")) {
     event.target.classList.remove("active");
     showingSubMenu = false;
     submenuEl.style.top = "0";
@@ -122,11 +122,17 @@ topMenuEl.addEventListener("click", function (event) {
 
   //* Task 5.4
   event.target.classList.remove("active");
+
+  //* Task 5.5
+  event.target.classList.add("active");
 });
 
-// topMenuLinks.forEach((link) => {
-//   link.classList.remove("active");
-// });
+//* Task 5.6
 
-// event.target.classList.add("active");
-// // showingSubMenu = true;
+let linkObj;
+
+//Task 6.0
+submenuEl,
+  addEventListener("click", (e) => {
+    e.preventDefault();
+  });
